@@ -1,5 +1,6 @@
 package com.example.respitrekdemoapp.di
 
+import com.example.respitrekdemoapp.network.AuthApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,11 +16,11 @@ object AppModule {
     @Singleton
     fun provideRetrofit(): Retrofit =
         Retrofit.Builder()
-            .baseUrl("BASEURL")
+            .baseUrl("http://simplifiedcoding.tech/mywebapp/public/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-//    @Provides
-//    @Singleton
-//    fun provideUnsplashApi(retrofit: Retrofit):UnsplashApi=
-//        retrofit.create(UnsplashApi::class.java)
+    @Provides
+    @Singleton
+    fun provideUnsplashApi(retrofit: Retrofit):AuthApi=
+        retrofit.create(AuthApi::class.java)
 }
