@@ -72,6 +72,8 @@ dependencies {
 
     // Paging 3
     implementation "androidx.paging:paging-runtime:$pagingVersion"
+
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
 }
 
 kapt {
