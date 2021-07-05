@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RespitrekDemoApp</string>
+    <string name="register"><u>Register</u></string>
+    <string name="forgotpwd"><u>Forgot password or username</u></string>
 </resources>
